@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulare</title>
+
+
+    <style>
+        label {
+            color: #00f;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 
+        Kontaktformular 
+        Chat
+        Shop-Bestellung
+        Uploads
+        Bewertungen (Ratings/Reviews)
+        Login / Authentifizierungen
+        Newsletteranmeldungen
+        ...
+    -->
+
+
+<form action="index.html" method="get">
+
+    <div>
+        <label for="text1zeilig" style="color: red;">Einzeiliges Texteingabefeld:</label>
+        <input type="text" id="text1zeilig" name="text1zeilig" placeholder="geben Sie ihre Worte ein">
+    </div>
+
+    <div>
+        <label for="pwd">Passwort:</label>
+        <input type="password" id="pwd">
+    </div>
+
+    <div>
+        <label for="mehrzeilig">Mehrzeilige Eingabe</label>
+        <textarea name="mehrzeilig" id="mehrzeilig" cols="20" rows="4"></textarea>
+    </div>
+    
+    <div>
+        <input type="checkbox" name="dsgvo" id="dsgvo" required><label for="dsgvo">Ich bin mit den Datenschutzbestimmungen einverstanden.</label>
+    </div>
+
+    <div>
+        <input type="radio" name="anrede" id="anrede_1" value="Frau">
+        <label for="anrede_1">Frau</label>
+        
+        <input type="radio" name="anrede" id="anrede_2" value="Herr">
+        <label for="anrede_2">Herr</label>
+        
+        <input type="radio" name="anrede" id="anrede_3" value="keine Angabe">
+        <label for="anrede_3">keine Angabe</label>
+
+
+
+    </div>
+
+    <div>
+        <!-- Input-Button -->
+        <!-- <input type="submit" value="Abschicken"> -->
+
+        <!-- Same as: Button-Tag -->
+        <button type="submit">Abschicken</button>
+    </div>
+
+</form>
+
+</body>
+</html>
