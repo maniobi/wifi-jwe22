@@ -1,0 +1,145 @@
+:root {
+    --grey: #dddddd;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', "Times New Roman", Geneva, Verdana, sans-serif;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+
+
+header.top {
+
+    /* Header über andere Elemente positionieren */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* Hero Image */
+#hero-image {
+    background: url(../img/blog-banner.png) no-repeat center top / cover;
+    height: 500px;
+    padding: 15px;
+    position: relative;
+    padding-top: 200px;
+}
+
+/* ? */
+#hero-image::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 0;
+}
+/* ? */
+#hero-image > * {
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-weight: 900;
+    color: white;
+}
+
+#hero-image button {
+    /* verwendet die Variablen für Farb-Angaben */
+    background: red;
+    color: white;
+    border: none;
+    padding: 20px 37px;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#hero-image button:hover {
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Common styles */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+
+
+/* Footer */
+
+footer.the-only-one {
+    background-color: var(--grey);
+    padding: 15px;
+}
+
+#footer-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer-nav ul {
+    list-style-type: "\25B8";
+    padding: 0;
+}
+#footer-nav li {
+    padding-left: 5px;
+}
+
+/* kann auch mit li::before angesprochen werden */
+#footer-nav li::marker {
+    color: red;
+    padding-right: 5px;
+}
+
+.endline {
+    font-size: 12px;
+    text-align: center;
+}
