@@ -1,0 +1,32 @@
+article {
+    max-width: 300px;
+}
+
+article h3 {
+    color: red;
+}
+
+article a {
+    color: red;
+}
+
+article::after {
+    content: '\25b8';
+    color: red;
+}
+
+/* ab einer viewport width (breite des Browserfensters) */
+@media screen and (min-width: 768px) {
+
+
+    .flexbox {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    article img {
+        max-width: 100%;
+    }
+
+}

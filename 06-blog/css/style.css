@@ -17,26 +17,23 @@ html * {
 
 
 header.top {
-
-    /* Header über andere Elemente positionieren */
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
-    
+    z-index: 100;
+    padding: 15px;
+
     display: flex;
+    /* Elemente innerhalb des <header class="top">...</header> werden auseinander gedrückt */
     justify-content: space-between;
 
-    padding: 5px;
 }
 
-
-
-
-
-
-
+/* das ausklappbare Menü-<ul></ul> wird ausgeblendet */
+#main-menu ul {
+    display: none;
+}
 
 
 /* Hero Image */
@@ -45,31 +42,42 @@ header.top {
     height: 500px;
     padding: 15px;
     position: relative;
-    padding-top: 200px;
+
+    display: flex;
+
+    /*  umkehren der Achse: 
+        Elemente werden untereinander, 
+        statt nebeneinander angeordnet 
+    */
+    flex-direction: column;
+
+    /* vertikal in die Mitte platzieren */
+    justify-content: center;
+
 }
 
-/* ? */
 #hero-image::before {
     content: '';
     display: block;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.3;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.2;
     z-index: 0;
 }
-/* ? */
-#hero-image > * {
-    position: relative;
-    z-index: 10;
-}
+
 
 h1 {
     font-weight: 900;
     color: white;
+}
+
+#hero-image button, h1 {
+    position: relative;
+    z-index: 10;
 }
 
 #hero-image button {
@@ -142,4 +150,17 @@ footer.the-only-one {
 .endline {
     font-size: 12px;
     text-align: center;
+}
+
+
+/* maximale Breite festlegen und Element zentrieren */
+.inner-wrapper {
+    max-width: 1024px;
+
+    /*  
+        zentriert ein Block-Element 
+        gilt für Elemente die display:block als Eigenschaft haben 
+    */
+    margin-left: auto;
+    margin-right: auto;
 }
