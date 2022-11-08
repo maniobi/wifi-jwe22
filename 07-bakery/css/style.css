@@ -1,0 +1,44 @@
+:root {
+    --gold: #c39065;
+    --grey: #707070;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: joe;
+    src: 
+        url(../fonts/josefin-sans-v20-latin-regular.woff),
+        url(../fonts/josefin-sans-v20-latin-regular.woff2)
+    ;
+    font-weight: normal;
+}
+@font-face {
+    font-family: joe;
+    src: 
+        url(../fonts/josefin-sans-v20-latin-300.woff),
+        url(../fonts/josefin-sans-v20-latin-300.woff2)
+    ;
+    font-weight: thin;
+}
+@font-face {
+    font-family: joe;
+    src: 
+        url(../fonts/josefin-sans-v20-latin-700.woff), 
+        url(../fonts/josefin-sans-v20-latin-700.woff2)
+    ;
+    font-weight: bold;
+}
+
+body {
+    font-family: joe;
+    font-size: 16px;
+}
