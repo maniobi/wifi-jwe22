@@ -2,43 +2,99 @@
     --gold: #c39065;
     --grey: #707070;
 }
-
-
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
-
 html * {
     box-sizing: border-box;
 }
-
 @font-face {
     font-family: joe;
-    src: 
-        url(../fonts/josefin-sans-v20-latin-regular.woff),
-        url(../fonts/josefin-sans-v20-latin-regular.woff2)
-    ;
+    src: url(../fonts/josefin-sans-v20-latin-regular.woff) format('woff'),
+        url(../fonts/josefin-sans-v20-latin-regular.woff2) format('woff2');
     font-weight: normal;
 }
 @font-face {
     font-family: joe;
-    src: 
-        url(../fonts/josefin-sans-v20-latin-300.woff),
-        url(../fonts/josefin-sans-v20-latin-300.woff2)
-    ;
-    font-weight: thin;
+    src: url(../fonts/josefin-sans-v20-latin-300.woff),
+        url(../fonts/josefin-sans-v20-latin-300.woff2);
+    font-weight: lighter;
 }
 @font-face {
     font-family: joe;
-    src: 
-        url(../fonts/josefin-sans-v20-latin-700.woff), 
-        url(../fonts/josefin-sans-v20-latin-700.woff2)
-    ;
+    src: url(../fonts/josefin-sans-v20-latin-700.woff),
+        url(../fonts/josefin-sans-v20-latin-700.woff2);
     font-weight: bold;
 }
-
 body {
     font-family: joe;
     font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#quality {
+    position: relative;
+    background-image: url(../img/qualitaetssiegel-goldene-eichel_300.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 125px;
+    display: block;
+    margin-left: auto;
+    top: -75px;
+}
+
+h1 {
+    font-weight: lighter;
+    text-align: center;
+}
+
+#products {
+    display: flex;
+    flex-flow: column;
+    gap: 75px;
+    padding: 50px;
+}
+
+
+.button {
+    display: inline-block;
+    width: 75%;
+
+    background-color: white;
+    color: var(--grey);
+    border: 2px solid var(--grey);
+    font-size: 1.5rem;
+    padding: 0.75em 0.5em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+
+    align-self: center;
+}
+
+
+#footer-nav {
+    background: var(--gold);
+    color: white;
+    text-align: center;
+}
+
+#footer-nav ul {
+    list-style: none;
+    padding: 2rem 0;
+    margin: 0;
+}
+
+#footer-nav a {
+    color: white;
+    text-decoration: none;
+    line-height: 2em;
+    
 }
