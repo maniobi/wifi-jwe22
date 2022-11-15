@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <header>
+            <header id="main-header">
                 <div id="logo">
                     <a href="index.html">
                         <img src="img/Logo-placeholder.png" alt="" />
@@ -66,6 +66,18 @@
             <footer>
 
                 <nav id="footer-nav">
+
+                    <address>
+                        Konditorei Bakery<br>
+                        Salzburgerstraße 55<br>
+                        5620 Schwarzach
+                        
+                        <p>
+                            E-Mail: mailbox@bakery.cc<br>
+                            Web: www.bakery.cc
+                        </p>
+                    </address>
+
                     <ul>
                         <li><a href="#">Datenschutz</a></li>
                         <li><a href="#">Unser Team</a></li>
@@ -85,5 +97,16 @@
 
             </footer>
         </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+        <script>
+            $('#main-nav a').on('click', function() {
+                $('#main-nav > ul').toggleClass('show');
+            });
+        </script>
     </body>
+
+
 </html>
