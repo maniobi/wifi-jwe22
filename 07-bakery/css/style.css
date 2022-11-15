@@ -99,6 +99,51 @@ img {
     text-transform: uppercase;
 }
 
+/* Tablet */
+@media screen and (min-width: 576px) {
+
+    #logo {
+        max-width: 200px;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main-nav > a {
+        display: none;
+    }
+
+    #main-nav > ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1em;
+        white-space: nowrap;
+        position: relative;
+        top: auto;
+        right: auto;
+        background-color: transparent;
+        font-size: 1em;
+        margin: 0;
+        padding: 1em;
+    }
+
+    #main-nav ul li {
+        border: none;
+        margin: 0;
+    }
+
+    #main-nav ul li a {
+        color: var(--grey);
+        text-transform: none;
+        font-weight: bold;
+    }
+
+}
+
+
+
 
 
 
