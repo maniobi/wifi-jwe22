@@ -245,6 +245,31 @@ nav#footer-nav address {
     #products img {
         flex: 1;
         max-width: calc(25% - 40px);
+        
+    }
+
+    
+    nav#footer-nav address {
+        display: block;
+        text-align: left;
+        font-style: normal;
+        line-height: 2em;
+    }
+
+    #footer-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+    }
+
+    #footer-nav ul {
+        text-align: right;
+    }
+
+    .inner-wrapper {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
