@@ -1,0 +1,32 @@
+html * {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+#top-container {
+    width: 100%;
+    height: 600px;
+    background: url(../img/pexels-klaus-nielsen-6287298_small.jpg) no-repeat center center / cover;
+}
+
+#top-bar {
+    background-color: #333;
+}
+
+@media screen and (max-width: 576px) {
+    
+    #top-container {
+        height: 300px;
+    }
+}

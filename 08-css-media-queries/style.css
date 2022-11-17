@@ -1,0 +1,33 @@
+#my-box {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 300px;
+    height: 200px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 200%;
+    color: #fff;
+    border: 10px solid red;
+    margin: 10px;
+
+    /* Animation zwischen 2 Zuständen */
+    transition: all 1s ease;
+}
+
+@media screen and (min-width: 800px) {
+    
+    #my-box {
+        top: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border: none;
+        margin: unset;
+    }
+
+    #my-box a {
+        color: inherit;
+    }
+
+}

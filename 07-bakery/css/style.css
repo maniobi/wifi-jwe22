@@ -28,6 +28,9 @@ html * {
         url(../fonts/josefin-sans-v20-latin-700.woff2);
     font-weight: bold;
 }
+
+
+
 body {
     font-family: joe;
     font-size: 16px;
@@ -56,6 +59,8 @@ img {
     flex: 1;
 }
 
+
+/* Main menu / Navigation */
 #main-nav {
     text-align: right;
 }
@@ -98,52 +103,6 @@ img {
     line-height: 2em;
     text-transform: uppercase;
 }
-
-/* Tablet */
-@media screen and (min-width: 576px) {
-
-    #logo {
-        max-width: 200px;
-        height: auto;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #main-nav > a {
-        display: none;
-    }
-
-    #main-nav > ul {
-        display: flex;
-        justify-content: flex-end;
-        gap: 1em;
-        white-space: nowrap;
-        position: relative;
-        top: auto;
-        right: auto;
-        background-color: transparent;
-        font-size: 1em;
-        margin: 0;
-        padding: 1em;
-    }
-
-    #main-nav ul li {
-        border: none;
-        margin: 0;
-    }
-
-    #main-nav ul li a {
-        color: var(--grey);
-        text-transform: none;
-        font-weight: bold;
-    }
-
-}
-
-
-
 
 
 
@@ -222,4 +181,71 @@ nav#footer-nav address {
 
 #end p  {
     margin: 0;
+}
+
+
+
+/* Tablet */
+@media screen and (min-width: 576px) {
+
+    #logo {
+        max-width: 200px;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main-nav > a {
+        display: none;
+    }
+
+    #main-nav > ul {
+        display: flex !important;
+        justify-content: flex-end;
+        gap: 1em;
+        white-space: nowrap;
+        position: relative;
+        top: auto;
+        right: auto;
+        background-color: transparent;
+        font-size: 1em;
+        margin: 0;
+        padding: 1em;
+    }
+
+    #main-nav ul li {
+        border: none;
+        margin: 0;
+    }
+
+    #main-nav ul li a {
+        color: var(--grey);
+        text-transform: none;
+        font-weight: bold;
+    }
+
+
+    #hero img {
+        width: 100%;
+        max-height: 50vh;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+
+    #products {
+        flex-flow: row;
+        gap: 30px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    #products img {
+        flex: 1;
+        max-width: calc(25% - 40px);
+    }
+
+
 }
