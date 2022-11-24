@@ -1,0 +1,30 @@
+html * {
+    box-sizing: border-box;
+}
+
+
+p {
+    /* Kein Umbruch: Text */
+    /* white-space: nowrap; */
+
+    /* Umbruch: Text */
+    /* word-wrap: break-word; */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media screen and (min-width: 768px) { 
+    body {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: red;
+    }
+}

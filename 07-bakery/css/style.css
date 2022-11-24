@@ -104,6 +104,10 @@ img {
     text-transform: uppercase;
 }
 
+#main-nav ul li a.active {
+    color: var(--gold);
+}
+
 
 
 #quality {
@@ -116,6 +120,7 @@ img {
     display: block;
     margin-left: auto;
     top: -75px;
+    margin-bottom: -62px;
 }
 
 h1 {

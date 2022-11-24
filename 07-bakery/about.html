@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bakery - Welcome</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <header id="main-header" class="inner-wrapper">
+                
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="img/Logo-placeholder.png" alt="" />
+                    </a>
+                </div>
+
+                <nav id="main-nav">
+                    <a href="#">
+                        <img src="img/nav-icon.svg" alt="nav-icon" />
+                    </a>
+                    <ul>
+                        <li><a href="about.html" class="active">Über uns</a></li>
+                        <li><a href="team.html">Unser Team</a></li>
+                        <li><a href="gallery.html">Galerie</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                
+            </header>
+
+
+            <main>
+
+                <div id="hero">
+                    <img src="img/pexels-maria-orlova-4913487.jpg" width="1000" height="100" alt="">
+                </div>
+
+               
+
+                <h1>Über uns</h1>
+
+                <div class="inner-wrapper">
+                    
+                    <section style="margin-top: 100px; margin-bottom: 100px; text-align: center;">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aliquid perferendis illo, autem excepturi reprehenderit nostrum architecto nam, aliquam libero, sed optio accusamus! Harum dolor nesciunt consequuntur veniam veritatis voluptates!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aliquid perferendis illo, autem excepturi reprehenderit nostrum architecto nam, aliquam libero, sed optio accusamus! Harum dolor nesciunt consequuntur veniam veritatis voluptates.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aliquid perferendis illo, autem excepturi reprehenderit nostrum architecto nam, aliquam libero, sed optio accusamus! Harum dolor nesciunt consequuntur veniam veritatis voluptates!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore architecto et ex dolorum quidem quod necessitatibus minus blanditiis commodi fugiat. Id sint nulla error commodi in tenetur libero qui? Sint.
+                        </p>
+                    </section>
+
+                </div>
+
+
+
+
+            </main>
+
+            <footer style="background-color: var(--gold)">
+
+                <nav id="footer-nav" class="inner-wrapper">
+
+                    <address>
+                        Konditorei Bakery<br>
+                        Salzburgerstraße 55<br>
+                        5620 Schwarzach
+                        
+                        <p>
+                            E-Mail: mailbox@bakery.cc<br>
+                            Web: www.bakery.cc
+                        </p>
+                    </address>
+
+                    <ul>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">Unser Team</a></li>
+                        <li><a href="#">Galerie</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz &amp; Cookies</a></li>
+                    </ul>
+                    
+                </nav>
+
+                <div id="end">
+                    <p>
+                        © 2022 Bakery | copright by JWE 22
+                    </p>
+                </div>
+
+
+            </footer>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+        <script>
+            $('#main-nav a').on('click', function() {
+                $('#main-nav > ul').toggleClass('show');
+            });
+        </script>
+    </body>
+
+
+</html>
