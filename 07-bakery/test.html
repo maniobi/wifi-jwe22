@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+
+    <style>
+
+        .container {  
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 15px 15px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "bild1 bild1"
+                "bild1 bild1"
+                "bild2 bild4"
+                "bild3 bild4";
+
+                
+            height: 300px;
+        }
+
+        .bild4 { 
+            grid-area: bild4; 
+            background-color: orange;
+        }
+
+        .bild1 { 
+            grid-area: bild1; 
+            background-color: greenyellow;
+        }
+
+        .bild2 { 
+            grid-area: bild2;
+            background-color: blueviolet; 
+        }
+
+        .bild3 { 
+            grid-area: bild3; 
+            background-color: pink;
+        }
+
+
+        @media screen and (min-width: 576px) {
+            
+            .container {  
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                    "bild1 bild1 bild2 bild4"
+                    "bild1 bild1 bild3 bild4";
+
+            }
+
+            
+
+        }
+
+
+        
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="bild4">Bild 4</div>
+        <div class="bild1">Bild 1</div>
+        <div class="bild2">Bild 2</div>
+        <div class="bild3">Bild 3</div>
+      </div>
+
+</body>
+</html>

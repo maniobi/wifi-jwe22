@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bakery - Team</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Dieses Styling gilt NUR für dieses HTML-Dokument -->
+        <style>
+
+            /* Mobile */
+            .team-member {
+                display: flex;
+                flex-flow: column-reverse;
+                gap: 15px;
+                padding: 30px;
+                align-items: center;
+                text-align: center;
+            }
+
+            /* Tablet */
+            @media screen and (min-width: 576px) {
+                
+                .team-member {
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-flow: row;
+                }
+
+                /* Überschreibregel (jedes 2. Element) */
+                .team-member:nth-child(2n) {
+                    flex-flow: row-reverse;
+                }
+
+
+                .team-member .info {
+                    background-color: orange;
+                    padding: 10%;
+
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    flex-flow: column;
+                    text-align: right;
+                }
+
+                /* Überschreibregel (jedes .info innerhalb eines jeden 2. Elementes) */
+                .team-member:nth-child(2n) .info {
+                    text-align: left;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <header id="main-header" class="inner-wrapper">
+                
+                <div id="logo">
+                    <a href="index.html">
+                        <img src="img/Logo-placeholder.png" alt="" />
+                    </a>
+                </div>
+
+                <nav id="main-nav">
+                    <a href="#">
+                        <img src="img/nav-icon.svg" alt="nav-icon" />
+                    </a>
+                    <ul>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="team.html" class="active">Unser Team</a></li>
+                        <li><a href="gallery.html">Galerie</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                
+            </header>
+
+
+            <main>
+                <div id="hero">
+                    <img src="img/pexels-meruyert-gonullu-6152263.jpg" width="1000" height="100" alt="">
+                </div>
+                <h1>Unser Team</h1>
+                <div class="inner-wrapper">
+                    
+
+                    <section class="team-member">
+                        <div class="info">
+                            Max Bauer<br>
+                            <small>Bäckermeister</small>
+                        </div>
+                        <img src="//via.placeholder.com/320x320" alt="Max Bauer">
+                    </section>
+
+                    
+                    <section class="team-member">
+                        <div class="info">
+                            Tim Kneter<br>
+                            <small>Bäckerlehrling</small>
+                        </div>
+                        <img src="//via.placeholder.com/320x320" alt="Tim Kneter">
+                    </section>
+
+                    
+                    <section class="team-member">
+                        <div class="info">
+                            Lila Tortina<br>
+                            <small>Konditorin</small>
+                        </div>
+                        <img src="//via.placeholder.com/320x320" alt="Lila Tortina">
+                    </section>
+
+                </div>
+            </main>
+
+            <footer style="background-color: var(--gold)">
+
+                <nav id="footer-nav" class="inner-wrapper">
+
+                    <address>
+                        Konditorei Bakery<br>
+                        Salzburgerstraße 55<br>
+                        5620 Schwarzach
+                        
+                        <p>
+                            E-Mail: mailbox@bakery.cc<br>
+                            Web: www.bakery.cc
+                        </p>
+                    </address>
+
+                    <ul>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">Unser Team</a></li>
+                        <li><a href="#">Galerie</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz &amp; Cookies</a></li>
+                    </ul>
+                    
+                </nav>
+
+                <div id="end">
+                    <p>
+                        © 2022 Bakery | copright by JWE 22
+                    </p>
+                </div>
+
+
+            </footer>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+        <script>
+            $('#main-nav a').on('click', function() {
+                $('#main-nav > ul').toggleClass('show');
+            });
+        </script>
+    </body>
+
+
+</html>

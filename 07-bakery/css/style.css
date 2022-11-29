@@ -104,7 +104,7 @@ img {
     text-transform: uppercase;
 }
 
-#main-nav ul li a.active {
+.active {
     color: var(--gold);
 }
 
