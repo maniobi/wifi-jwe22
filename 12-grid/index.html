@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid System</title>
+
+    <style>
+
+        html * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template-columns: auto 80% auto;
+            grid-template-rows: 200px auto 50px;
+
+            grid-template-areas: 
+                "   .   header  .   "
+                "   .   main    .   "
+                "   .   footer  .   "
+            ;
+        }
+
+        #main-header {
+            background: lightskyblue;
+            grid-area: header;
+        }
+
+        #logo {
+            max-width: 200px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        main {
+            background: burlywood;
+            grid-area: main;
+        }
+
+        #main-footer {
+            background: orangered;
+            grid-area: footer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="main-header">
+            <div id="logo">
+                <img src="../07-bakery/img/Logo-placeholder.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li>Menu</li>
+                    <li>Menu2</li>
+                    <li>menu3</li>
+                    <li>menu4</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iste, qui quasi, quibusdam aut aperiam dolorem officia, similique architecto tempora asperiores at voluptas repellat provident animi dignissimos voluptates ea modi.
+        </main>
+        <footer id="main-footer"></footer>
+    </div>
+</body>
+</html>

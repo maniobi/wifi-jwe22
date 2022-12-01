@@ -105,7 +105,7 @@ img {
 }
 
 .active {
-    color: var(--gold);
+    color: var(--gold) !important;
 }
 
 
