@@ -1,0 +1,321 @@
+/* Variablen */
+:root {
+    --bluegreen: #08B8B3;
+    --grey: #808080;
+}
+
+/* Schriften einbinden */
+@font-face {
+    font-family: mont;
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: mont;
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+}
+
+
+/* Animation: Footer Herz */
+@keyframes heartbeat {
+    0% {
+        transform: scale(3);
+        color: red;
+        
+    }
+    50% {
+        transform: scale(0.8);
+        color: white;
+    }
+    100% {
+        transform: scale(3);
+        color: red;
+        
+    }
+}
+/* Animation: Button */
+@keyframes buttonbeat {
+    0% {
+        transform: scale(1.05) translateY(50%);    
+    }
+    50% {
+        transform: scale(0.95) translateY(50%);
+    }
+    100% {
+        transform: scale(1.05) translateY(50%);        
+    }
+}
+
+
+
+/* Standard Einstellungen */
+html * {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+    color: inherit;
+    transition: all 0.5s ease;
+}
+
+
+
+body {
+    font-family: mont, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+header {
+    background: black;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--bluegreen);
+}
+
+header .inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    max-width: 79px;
+}
+
+.inner-wrapper {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#hero img {
+    object-fit: cover;
+    object-position: center;
+    min-height: 191px;
+    max-height: 585px;
+}
+
+#teaser {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--bluegreen);
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.2em;
+}
+
+#teaser .teaser-wrapper {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#teaser article {
+    background: var(--bluegreen);
+    color: white;
+    padding: 30px;
+}
+
+article h2 {
+    font-size: 20px;
+}
+
+article a {
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+article a::after {
+    content: '➜';
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+#download {
+    background: var(--grey);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+#download .app-buttons {
+    margin: 15px 0 15px;
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+
+
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    line-height: 2em;
+}
+
+footer a {
+    color: var(--bluegreen);
+}
+
+
+.heartbeat {
+    position: relative;
+    display: inline-block;
+
+    animation-name: heartbeat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: center center;
+}
+
+
+
+/* Tablet size and higher */
+
+@media screen and (min-width: 1024px) {
+    
+    #button {
+        position: relative;
+    }
+
+    #button span {
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        width: 199px;
+        height: 199px;
+        background: url(../img/exklusiv-button.png) no-repeat center / contain;
+        transform: translateY(50%);
+        transform-origin: center bottom;
+        animation-name: buttonbeat;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: left;
+    }
+
+    #teaser .subtitle {
+        font-size: 18px;
+        text-align: left;
+        max-width: 65%;
+    }
+
+    #teaser .teaser-wrapper {
+        flex-flow: row;
+    }
+
+    #teaser article {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    #download .app-buttons {
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    
+    #button span {
+        
+        width: 300px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    #hero img {
+        width: 100%;
+    }
+
+    footer {
+        padding: 50px;
+    }
+
+    footer .inner-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    footer nav {
+        text-align: left;
+    }
+
+    footer p {
+        text-align: right;
+        margin-bottom: 0;
+    }
+
+
+    footer a:hover {
+        text-shadow: 0 0 10px var(--bluegreen),  0 0 10px var(--bluegreen),  0 0 10px var(--bluegreen) ;
+        color: white;
+        text-decoration: none;
+    }
+
+
+    article a:hover {
+        text-shadow: 0 3px 10px black;
+    }
+
+    article a:hover::after {
+        transform: translateX(25%);
+    }
+
+    .app-buttons a {
+        border-radius: 30px;
+        transform-origin: center center;
+    }
+
+    .app-buttons a:hover {
+        transform: scale(1.25);
+        margin: 0 30px;
+        box-shadow: 0 1em 5px 0 rgba(0,0,0,0.2);
+    }
+
+}
