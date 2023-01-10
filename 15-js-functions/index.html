@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktionen in Javascript</title>
+
+    <style> 
+        #controls button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #controls button:active {
+            background-color: black;
+            color: white;
+        }
+
+        #termo {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #display {
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="termo">
+        <div id="display">
+            <!-- hier kommt die Temperatur  -->
+        </div>
+        <div id="controls">
+            <button onclick="temperaturHoch()">+</button>
+            <button onclick="temperaturRunter()">-</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
