@@ -1,25 +1,33 @@
 console.log('Hey!');
-let temp = 24;
+let temp = 0;
 
 const display = document.getElementById('display');
 display.innerText = temp + '°';
 
+let interval = false;
 
 function temperaturHoch() {
-    // code innerhalb der Funktion
-    temp++;
-    console.log(temp);
-    display.innerText = temp + '°';
+    
+    if(temp < 30) {
+        temp++;
+        console.log(temp);
+        display.innerText = temp + '°';
 
-    checkTempAndSetColor();
+        checkTempAndSetColor();
+        setTacho();
+    }
 }
 
 function temperaturRunter() {
-    temp--;
-    console.log(temp);
-    display.innerText = temp + '°';
 
-    checkTempAndSetColor();
+    if(temp > 0) {
+        temp--;
+        console.log(temp);
+        display.innerText = temp + '°';
+
+        checkTempAndSetColor();
+        setTacho();
+    }
 }
 
 function checkTempAndSetColor() {
@@ -34,3 +42,9 @@ function checkTempAndSetColor() {
 
     document.getElementsByTagName('body')[0].style.backgroundColor = bodyColor;
 }
+
+
+function setTacho() {
+    document.getElementById('pfeil').style.transform = 'rotate(' + ((180 / 30 * temp) - 180) + 'deg)';
+}
+
